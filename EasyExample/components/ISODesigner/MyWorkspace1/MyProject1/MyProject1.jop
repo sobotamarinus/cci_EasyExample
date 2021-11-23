@@ -381,7 +381,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_PlusPlus" Pinned="FALSE" JVS-ID="5000">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>10079436</Value>
+					<Value>3394611</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -417,7 +417,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Reset_Gesamtzaehler" Pinned="FALSE" JVS-ID="5001">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>10079436</Value>
+					<Value>255</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -453,7 +453,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_Reset_Tageszaehler" Pinned="FALSE" JVS-ID="5002">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>10079436</Value>
+					<Value>255</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
@@ -489,7 +489,7 @@
 		<Object Class="CSoftKey" Name="SoftKey" ObjectName="SoftKey_MinusMinus" Pinned="FALSE" JVS-ID="5003">
 			<PropertySheet Name="SoftKey">
 				<Property Name="BackColor">
-					<Value>10079436</Value>
+					<Value>52275</Value>
 				</Property>
 				<Property Name="KeyCode">
 					<Value>1</Value>
