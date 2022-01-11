@@ -73,7 +73,8 @@ void VTC_setPoolManipulation(const ISOVT_EVENT_DATA_T* psEvData)
    u16SKM_Scal = (iso_u16)IsoVtcPoolReadInfo(psEvData->u8Instance, PoolSoftKeyMaskScalFaktor);
 
    IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 5100u, 5300u, u16SKM_Scal, Centering);       // Scale and center Keys
-   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20700u, 20799u, u16SKM_Scal, Scaling);         // Scale Pictures in keys
+   IsoVtcPoolSetIDRangeMode(psEvData->u8Instance, 20700u, 20799u, u16SKM_Scal, Scaling);
+ // Scale Pictures in keys
 
 
    // ------------------------------------------------------------------------------
@@ -174,13 +175,21 @@ void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pBut
 		break;
 	}
 
-
-	if( Tageszaehler == 1)
+	switch(Gesamtzaehler)
+	{
+	case 1:
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 1, 440, 100, 200);
-	if( Tageszaehler == 2)
+		break;
+	case 2:
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 2, 440, 100, 200);
-	if( Tageszaehler == 3)
+		break;
+	case 3:
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 3, 440, 100, 200);
+		break;
+	}
+
+
+
 
 
 	// Senden des Wertes der lokalen Variable Tageszaehler an die NumberVariable_Tageszaehler
