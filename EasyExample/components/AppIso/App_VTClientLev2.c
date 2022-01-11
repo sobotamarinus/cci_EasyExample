@@ -175,11 +175,11 @@ void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pBut
 	}
 
 
-	if( Gesamtzaehler == 1)
+	if( Tageszaehler == 1)
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 1, 440, 100, 200);
-	if( Gesamtzaehler == 2)
+	if( Tageszaehler == 2)
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 2, 440, 100, 200);
-	if( Gesamtzaehler == 3)
+	if( Tageszaehler == 3)
 		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 3, 440, 100, 200);
 
 
