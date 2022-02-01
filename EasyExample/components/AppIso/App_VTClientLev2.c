@@ -14,22 +14,22 @@
 */
 /* **************************  includes ********************************** */
 
-#include "IsoDef.h"
+	#include "IsoDef.h"
 
-#ifdef _LAY6_  /* compile only if VT client is enabled */
+	#ifdef _LAY6_  /* compile only if VT client is enabled */
 
 
-#include "VIEngine.h"
-#include "App_VTClientLev2.h"   // -> Object defines
+	#include "VIEngine.h"
+	#include "App_VTClientLev2.h"   // -> Object defines
 
-#include "MyProject1.iop.h"
-#include "MyProject1.c.h"
+	#include "MyProject1.iop.h"
+	#include "MyProject1.c.h"
 
-#include "settings.h"
+	#include "settings.h"
 
-#include "esp_log.h"
+	#include "esp_log.h"
 
-static const char *TAG = "App_VTClientLev2";
+	static const char *TAG = "App_VTClientLev2";
 
 
 //********************************************************************************************
@@ -175,18 +175,11 @@ void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pBut
 		break;
 	}
 
-	switch(Gesamtzaehler)
-	{
-	case 1:
-		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 1, 440, 100, 200);
-		break;
-	case 2:
-		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 2, 440, 100, 200);
-		break;
-	case 3:
-		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, 3, 440, 100, 200);
-		break;
-	}
+
+	if (Gesamtzaehler <=3)
+		IsoVtcCmd_CtrlAudioSignal(pButtonData->u8Instance, Gesamtzaehler, 440, 100, 200);
+
+
 
 
 
